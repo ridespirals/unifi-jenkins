@@ -1,0 +1,9 @@
+{
+  "name": "unifi-jenkins",
+  "version": "0.0.1",
+  "description": "Monitor Unifi projects in Jenkins",
+  "main": "index.js",
+  "keywords": ['unifi', 'jenkins', 'monitor'],
+  "author": "John Varga <john.varga@inviewlabs.com> (http://www.inviewlabs.com)",
+  "license": "MIT"
+}

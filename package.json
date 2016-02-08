@@ -9,6 +9,9 @@
     "jenkins",
     "monitor"
   ],
+  "scripts": {
+  	"default": "electron ./src"
+  },
   "author": "John Varga <john.varga@inviewlabs.com> (http://www.inviewlabs.com)",
   "license": "MIT",
   "dependencies": {

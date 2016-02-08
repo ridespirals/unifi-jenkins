@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Monitor Unifi projects in Jenkins",
   "main": "index.html",
+  "repository": "https://github.com/ridespirals/unifi-jenkins.git",
   "keywords": [
     "unifi",
     "jenkins",
@@ -11,6 +12,8 @@
   "author": "John Varga <john.varga@inviewlabs.com> (http://www.inviewlabs.com)",
   "license": "MIT",
   "dependencies": {
+    "angular": "^1.5.0",
+    "angular-route": "^1.5.0",
     "electron": "^0.4.1"
   }
 }

@@ -1,1 +1,24 @@
 <p ng-bind="test"></p>
+
+<div ng-if="unifiBeta">
+	<hr />
+	<h2><a href="{{ unifiBeta.url }}">{{ unifiBeta.displayName }}</a></h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Score</th>
+				<th></th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="report in unifiBeta.healthReport">
+				<td>{{ report.score }}</td>
+				<td>
+					<img ng-class="report.iconClassName" ng-src="report.iconUrl" />
+				</td>
+				<td>{{ report.description }}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

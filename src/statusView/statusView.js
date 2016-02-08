@@ -9,6 +9,13 @@ angular.module('unifi-jenkins.statusView', ['ngRoute'])
 	});
 }])
 
-.controller('StatusViewCtrl', ['$scope', function($scope) {
+.controller('StatusViewCtrl', ['$scope', 'jobsFactory', function($scope, jobsFactory) {
 	$scope.test = 'Hello from controller!';
+
+	jobsFactory.getJob('Unifi-Beta').then(function(result) {
+		$scope.unifiBeta = result.data;
+		console.log('Unifi Beta Job', result);
+	});
+
+
 }]);

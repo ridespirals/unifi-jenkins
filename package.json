@@ -3,7 +3,14 @@
   "version": "0.0.1",
   "description": "Monitor Unifi projects in Jenkins",
   "main": "index.html",
-  "keywords": ["unifi", "jenkins", "monitor"],
+  "keywords": [
+    "unifi",
+    "jenkins",
+    "monitor"
+  ],
   "author": "John Varga <john.varga@inviewlabs.com> (http://www.inviewlabs.com)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^0.4.1"
+  }
 }

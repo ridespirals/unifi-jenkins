@@ -13,5 +13,8 @@
   ],
   "homepage": "https://github.com/ridespirals/unifi-jenkins",
   "moduleType": [],
-  "private": true
+  "private": true,
+  "dependencies": {
+    "angular": "angularjs#~1.5.0"
+  }
 }

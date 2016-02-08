@@ -1,0 +1,17 @@
+{
+  "name": "unifi-jenkins",
+  "description": "Monitor Unifi projects in Jenkins",
+  "main": "index.html",
+  "authors": [
+    "John Varga <john.varga@inviewlabs.com> (http://www.inviewlabs.com)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "unifi",
+    "jenkins",
+    "monitor"
+  ],
+  "homepage": "https://github.com/ridespirals/unifi-jenkins",
+  "moduleType": [],
+  "private": true
+}

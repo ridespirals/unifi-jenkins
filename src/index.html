@@ -3,7 +3,7 @@
 <head>
 	<title>Unifi Jenkins Monitor</title>
 </head>
-<body ng-app>
+<body ng-app="unifi-jenkins">
 	<h1>Hello World</h1>
 	<p>
 		We are using:
@@ -14,7 +14,11 @@
 		</ul>
 	</p>
 
+	<div ng-view></div>
+
 	<script src="bower_components/angular/angular.js"></script>
-	<script src="js/app.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="app.js"></script>
+	<script src="statusView/statusView.js"></script>
 </body>
 </html>

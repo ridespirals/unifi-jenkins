@@ -1,8 +1,7 @@
-<p ng-bind="test"></p>
+<p class="loading" ng-if="!jobs.length">Loading...</p>
 
-<div ng-if="unifiBeta">
-	<hr />
-	<h2><a href="{{ unifiBeta.url }}">{{ unifiBeta.displayName }}</a></h2>
+<div ng-repeat="job in jobs">
+	<h2><a href="{{ job.url }}">{{ job.displayName }}</a></h2>
 	<table>
 		<thead>
 			<tr>
@@ -12,7 +11,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="report in unifiBeta.healthReport">
+			<tr ng-repeat="report in job.healthReport">
 				<td>{{ report.score }}</td>
 				<td>
 					<img ng-class="report.iconClassName" ng-src="report.iconUrl" />
@@ -21,4 +20,5 @@
 			</tr>
 		</tbody>
 	</table>
+	<hr />
 </div>

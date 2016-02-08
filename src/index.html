@@ -2,19 +2,18 @@
 <html>
 <head>
 	<title>Unifi Jenkins Monitor</title>
+	<link href='https://fonts.googleapis.com/css?family=Sura:400,700|Catamaran:400,200,600|Fira+Mono' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="style.css" media="all" />
 </head>
 <body ng-app="unifi-jenkins">
-	<h1>Hello World</h1>
-	<p>
-		We are using:
-		<ul>
-			<li>Node <script>document.write(process.versions.node)</script></li>
-			<li>Chrome <script>document.write(process.versions.chrome)</script></li>
-			<li>Electron <script>document.write(process.versions.electron)</script></li>
-		</ul>
-	</p>
-
+	
 	<div ng-view></div>
+
+	<div id="versions">
+		<div class="item"><span class="item-name">Node</span> <span class="item-version"><script>document.write(process.versions.node)</script></span></div>
+		<div class="item"><span class="item-name">Chrome</span> <span class="item-version"><script>document.write(process.versions.chrome)</script></span></div>
+		<div class="item"><span class="item-name">Electron</span> <span class="item-version"><script>document.write(process.versions.electron)</script></span></div>
+	</div>
 
 	<script src="../node_modules/angular/angular.js"></script>
 	<script src="../node_modules/angular-route/angular-route.js"></script>

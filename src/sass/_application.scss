@@ -11,5 +11,44 @@ body {
 }
 
 .job-status {
-	
+	font-family: $sans;
+	background: #eff;
+	padding: 10px;
+	margin-bottom: 20px;
+	position: relative;
+
+	.name { 
+		font-size: 22px;
+		font-family: $serif;
+	}
+
+	.last-build {
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-size: 12px;
+		padding: 10px 16px;
+		background: #cee;
+	}
+
+	.health-report {
+
+		font-size: 12px;
+
+		.health {
+			$s: 30px;
+			width: $s;
+			height: $s;
+			line-height: $s;
+			text-align: center;
+			font-size: 14px;
+			color: white;
+		}
+
+		.report.icon-health-80plus {
+			.health {
+				background: #3ac;
+			}
+		}
+	}
 }

@@ -4,7 +4,7 @@
 
 	<div class="name">{{ item.displayName }}</div>
 	
-	<div class="health" ng-repeat="report in item.healthReport">
+	<div class="health-report" ng-repeat="report in item.healthReport">
 		<div class="report" ng-class="report.iconClassName">
 			<div class="health">{{ report.score }}</div>
 			<div class="description">{{ report.description }}</div>

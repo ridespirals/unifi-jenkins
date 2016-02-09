@@ -18,6 +18,8 @@ angular.module('unifi-jenkins')
 				});
 			}
 
+			$interval(refresh, 1000 * 10);
+
 			refresh();
 		}
 	};

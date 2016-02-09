@@ -9,7 +9,7 @@ angular.module('unifi-jenkins.statusView', ['ngRoute'])
 	});
 }])
 
-.controller('StatusViewCtrl', ['$scope', 'jobsFactory', function($scope, jobsFactory) {
+.controller('StatusViewCtrl', ['$scope', 'jobsFactory', 'teamFactory', function($scope, jobsFactory, teamFactory) {
 
 	$scope.jobs = [];
 
@@ -19,5 +19,10 @@ angular.module('unifi-jenkins.statusView', ['ngRoute'])
 		jobsFactory.getJob(j).then(function(result) {
 			$scope.jobs.push(result.data);
 		});
+	});
+
+	teamFactory.getTeam('inviewlabs').then(function(result) {
+		console.log('- get team ', result.data);
+		$scope.team = result.data;
 	});
 }]);

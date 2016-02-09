@@ -19,6 +19,13 @@
     "angular": "^1.5.0",
     "angular-route": "^1.5.0",
     "electron": "^0.4.1",
-    "node-sass": "^3.4.2"
+    "gulp": "^3.9.1",
+    "gulp-run-electron": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-watch": "^4.3.5",
+    "merge-stream": "^1.0.0",
+    "node-sass": "^3.4.2",
+    "rimraf": "^2.5.1",
+    "run-sequence": "^1.1.5"
   }
 }

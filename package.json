@@ -10,13 +10,15 @@
     "monitor"
   ],
   "scripts": {
-  	"default": "electron ./src"
+    "predefault": "node-sass ./src/style.scss ./src/style.css",
+    "default": "electron ./src"
   },
   "author": "John Varga <john.varga@inviewlabs.com> (http://www.inviewlabs.com)",
   "license": "MIT",
   "dependencies": {
     "angular": "^1.5.0",
     "angular-route": "^1.5.0",
-    "electron": "^0.4.1"
+    "electron": "^0.4.1",
+    "node-sass": "^3.4.2"
   }
 }

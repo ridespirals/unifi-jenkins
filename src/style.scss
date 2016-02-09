@@ -13,16 +13,17 @@ html {
 	padding: 5px;
 	font-size: 10px;
 	font-family: 'Catamaran', sans-serif;
-}
 
-#versions .item {
-	float: left;
-	margin-right: 1em;
-}
+	.item {
+		float: left;
+		margin-right: 1em;
 
-#versions .item-name {
-	color: #444;
-}
-#versions .item-version {
-	color: #999;
+		.item-name {
+			color: #444;
+		}
+
+		.item-version {
+			color: #999;
+		}
+	}
 }

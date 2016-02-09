@@ -10,7 +10,7 @@
     "monitor"
   ],
   "scripts": {
-    "predefault": "node-sass ./src/style.scss ./src/style.css",
+    "predefault": "node-sass ./src/sass/style.scss ./src/style.css",
     "default": "electron ./src"
   },
   "author": "John Varga <john.varga@inviewlabs.com> (http://www.inviewlabs.com)",

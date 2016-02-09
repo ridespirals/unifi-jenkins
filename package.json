@@ -17,11 +17,13 @@
   "license": "MIT",
   "dependencies": {
     "angular": "^1.5.0",
+    "angular-electron": "^0.2.1",
     "angular-route": "^1.5.0",
     "electron": "^0.4.1",
     "gulp": "^3.9.1",
     "gulp-run-electron": "^1.2.2",
     "gulp-sass": "^2.2.0",
+    "gulp-useref": "^3.0.5",
     "gulp-watch": "^4.3.5",
     "merge-stream": "^1.0.0",
     "node-sass": "^3.4.2",

@@ -4,23 +4,25 @@ var rimraf 		= require('rimraf');
 var sequence 	= require('run-sequence');
 var merge		= require('merge-stream');
 var runElectron = require('gulp-run-electron');
+var useref		= require('gulp-useref');
 
 gulp.task('run-app', function() {
 	gulp.src('dist')
 		.pipe(runElectron([], { cwd: 'dist' }));
 });
 
-gulp.task('copy', function() {
-	var html = gulp.src('src/**/*.html')
+gulp.task('electron', function() {
+	var js = gulp.src('src/main.js')
 		.pipe(gulp.dest('dist'));
-
-	var js = gulp.src('src/**/*.js')
-		.pipe(gulp.dest('dist'));
-
 	var pkg = gulp.src('src/package.json')
 		.pipe(gulp.dest('dist'));
+	return merge(js, pkg);
+});
 
-	return merge(html, js, pkg);
+gulp.task('copy', function() {
+	return gulp.src('src/**/*.html')
+		.pipe(useref())
+		.pipe(gulp.dest('dist'));
 });
 
 gulp.task('sass', function() {
@@ -38,6 +40,10 @@ gulp.task('watch', function() {
 	gulp.watch(['src/**/*.html', 'src/**/*.js'], ['copy', runElectron.rerun]);
 });
 
+gulp.task('build', function() {
+	sequence(['clean'], ['sass', 'copy', 'electron']);
+});
+
 gulp.task('default', function() {
-	sequence(['clean'], ['sass', 'copy'], ['watch', 'run-app']);
+	sequence(['clean'], ['sass', 'copy', 'electron'], ['watch', 'run-app']);
 });

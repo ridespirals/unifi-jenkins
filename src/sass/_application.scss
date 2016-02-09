@@ -7,7 +7,7 @@ html {
 }
 
 body { 
-	margin-bottom: 22px; 
+	margin-bottom: 26px; 
 }
 
 .job-status {
@@ -20,6 +20,17 @@ body {
 	.name { 
 		font-size: 22px;
 		font-family: $serif;
+	}
+
+	.repository {
+
+		&, & .name { font-size: 14px; }
+
+		.name { }
+		.branch { 
+			font-weight: bold; 
+			color: #666; 
+		}
 	}
 
 	.last-build {

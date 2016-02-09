@@ -3,6 +3,10 @@
 	<div ng-if="item.lastBuild" class="last-build">Last Build: 	{{ item.lastBuild.number }}</div>
 
 	<div class="name">{{ item.displayName }}</div>
+
+	<div class="repository">
+		<span class="name">{{ repo }}</span>/<span class="branch">{{ branch }}</span>
+	</div>
 	
 	<div class="health-report" ng-repeat="report in item.healthReport">
 		<div class="report" ng-class="report.iconClassName">

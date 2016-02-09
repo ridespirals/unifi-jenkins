@@ -6,7 +6,9 @@ angular.module('unifi-jenkins')
 	return {
 		restrict: 'E',
 		scope: {
-			name: '@jobName'
+			name: '@jobName',
+			repo: '@repository',
+			branch: '@branch'
 		},
 		templateUrl: 'components/jobStatus/jobStatus.html',
 		link: function(scope, elem, attrs) {

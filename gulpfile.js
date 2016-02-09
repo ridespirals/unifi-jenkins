@@ -47,3 +47,13 @@ gulp.task('build', function() {
 gulp.task('default', function() {
 	sequence(['clean'], ['sass', 'copy', 'electron'], ['watch', 'run-app']);
 });
+
+gulp.task('help', function() {
+	var chalk = require('chalk');
+	console.log('');
+	console.log(chalk.bold('Unifi Monitor - Electron'));
+	console.log(chalk.cyan('  gulp '), 'Build and watch for changes, and run application');
+	console.log(chalk.cyan('  gulp build '), 'Build application to ', chalk.yellow('dist'));
+	console.log(chalk.cyan('  gulp run-app '), 'Start the application currently in ', chalk.yellow('dist'));
+	console.log('');
+});

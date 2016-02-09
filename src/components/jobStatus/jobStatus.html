@@ -1,0 +1,12 @@
+<div class="job-status">
+
+	<div ng-if="item.lastBuild" class="last-build">Last Build: 	{{ item.lastBuild.number }}</div>
+
+	<div class="name">{{ item.displayName }}</div>
+	
+	<div class="health" ng-repeat="report in item.healthReport">
+		<div class="report" ng-class="report.iconClassName">
+			<div class="health">{{ report.score }}</div>
+			<div class="description">{{ report.description }}</div>
+	</div>
+</div>

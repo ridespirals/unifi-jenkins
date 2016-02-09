@@ -11,15 +11,13 @@ angular.module('unifi-jenkins.statusView', ['ngRoute'])
 
 .controller('StatusViewCtrl', ['$scope', 'jobsFactory', 'teamFactory', function($scope, jobsFactory, teamFactory) {
 
-	$scope.jobs = [];
+	$scope.jobs = ['beta-unifi', 'beta-portal', 'beta-licensing', 'dev-unifi', 'dev-licensing'];
 
-	var jobs = ['beta-unifi', 'beta-portal', 'beta-licensing', 'dev-unifi', 'dev-licensing'];
-
-	jobs.forEach(function(j) {
-		jobsFactory.getJob(j).then(function(result) {
-			$scope.jobs.push(result.data);
-		});
-	});
+	// jobs.forEach(function(j) {
+	// 	jobsFactory.getJob(j).then(function(result) {
+	// 		$scope.jobs.push(result.data);
+	// 	});
+	// });
 
 	teamFactory.getTeam('inviewlabs').then(function(result) {
 		console.log('- get team ', result.data);

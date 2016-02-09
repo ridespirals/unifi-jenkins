@@ -1,24 +1,3 @@
 <p class="loading" ng-if="!jobs.length">Loading...</p>
 
-<div ng-repeat="job in jobs">
-	<h2><a href="{{ job.url }}">{{ job.displayName }}</a></h2>
-	<table>
-		<thead>
-			<tr>
-				<th>Score</th>
-				<th></th>
-				<th>Description</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="report in job.healthReport">
-				<td>{{ report.score }}</td>
-				<td>
-					<img ng-class="report.iconClassName" ng-src="report.iconUrl" />
-				</td>
-				<td>{{ report.description }}</td>
-			</tr>
-		</tbody>
-	</table>
-	<hr />
-</div>
+<job-status ng-repeat="j in jobs" job-name="{{ j }}"></job-status>

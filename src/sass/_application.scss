@@ -56,6 +56,12 @@ body {
 			color: white;
 		}
 
+		.report .health { background: #888; }
+		.report.icon-health-00to19 {
+				.health {
+					background: #c02;
+				}
+		}
 		.report.icon-health-80plus {
 			.health {
 				background: #3ac;

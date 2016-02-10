@@ -1,3 +1,13 @@
 $serif: 'Sura', serif;
 $sans: 'Catamaran', sans-serif;
 $mono: 'Fira Mono', monospace;
+
+$teal: #009688;
+
+@mixin clearfix {
+	&::after {
+		clear: both;
+		content: "";
+		display: table;
+	}
+}

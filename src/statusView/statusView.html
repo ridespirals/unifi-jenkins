@@ -1,8 +1,12 @@
-<p class="loading" ng-if="!jobs.length">Loading...</p>
+<div class="job-status-container">
 
-<job-status 
-	ng-repeat="j in jobs" 
-	job-name="{{ j.name }}" 
-	repository="{{ j.repository }}" 
-	branch="{{ j.branch }}">
-</job-status>
+	<p class="loading" ng-if="!jobs.length">Loading...</p>
+
+	<job-status 
+		ng-repeat="j in jobs" 
+		job-name="{{ j.name }}" 
+		repository="{{ j.repository }}" 
+		branch="{{ j.branch }}">
+	</job-status>
+
+</div>

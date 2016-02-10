@@ -8,14 +8,40 @@ html {
 
 body { 
 	margin-bottom: 26px; 
+	background: #fefefe;
+}
+
+.job-status-container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
 }
 
 .job-status {
+	flex: 1 0 300px;
+	align-self: stretch;
+	max-width: 100%;
+	min-height: 240px;
+	margin: 5px;
+	border: 1px solid $teal;
+
 	font-family: $sans;
-	background: #eff;
-	padding: 10px;
-	margin-bottom: 20px;
+	background: #f4fefe;
+	padding: 5px 10px;
 	position: relative;
+
+	@media screen and(max-width: 600px) {
+		.job-status {
+			flex-basis: 100%;
+			max-width: 100%;
+		}
+	}
+
+	/*float: left;
+	width: 350px;
+	height: 240px;
+	margin-right: 10px;
+	margin-bottom: 10px;*/
 
 	.name { 
 		font-size: 22px;
@@ -23,6 +49,9 @@ body {
 	}
 
 	.repository {
+
+		border-bottom: 1px solid $teal;
+		margin-bottom: 10px;
 
 		&, & .name { font-size: 14px; }
 
@@ -43,6 +72,7 @@ body {
 	}
 
 	.health-report {
+		@include clearfix;
 
 		font-size: 12px;
 
@@ -54,6 +84,17 @@ body {
 			text-align: center;
 			font-size: 14px;
 			color: white;
+			float: left;
+			margin-right: 5px;
+		}
+
+		.report {
+			float: left; 
+			width: 100%;
+			height: 30px;
+			line-height: 30px;
+			overflow: hidden;
+			margin-bottom: 5px;
 		}
 
 		.report .health { background: #888; }
@@ -67,5 +108,12 @@ body {
 				background: #3ac;
 			}
 		}
+	}
+
+	.status {
+		position: absolute;
+		bottom: 0;
+		font-size: 11px;
+		color: $teal;
 	}
 }

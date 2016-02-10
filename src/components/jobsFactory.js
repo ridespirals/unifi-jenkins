@@ -8,7 +8,7 @@ angular.module('unifi-jenkins')
 	var factory = {};
 
 	factory.getJob = function(name) {
-		$log.log('-jobs- get job ', name);
+		// $log.log('-jobs- get job ', name);
 		return $http.get(urlBase + name + api);
 	};
 

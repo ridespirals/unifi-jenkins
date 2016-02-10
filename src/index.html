@@ -3,7 +3,7 @@
 <head>
 	<title>Unifi Jenkins Monitor</title>
 	<link href='https://fonts.googleapis.com/css?family=Sura:400,700|Catamaran:400,200,600|Fira+Mono' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="style.css" media="all" />
+	<link rel="stylesheet" href="style.css" media="all">
 </head>
 <body ng-app="unifi-jenkins">
 	
@@ -17,9 +17,14 @@
 
 	<!-- build:js js/master.js -->
 	<script src="../node_modules/lodash/dist/lodash.js"></script>
+	<script src="../node_modules/moment/moment.js"></script>
 	<script src="../node_modules/angular/angular.js"></script>
 	<script src="../node_modules/angular-route/angular-route.js"></script>
 	<script src="../node_modules/angular-electron/angular-electron.js"></script>
+	<script src="../node_modules/angular-moment/angular-moment.js"></script>
+
+
+
 	<script src="app.js"></script>
 	<script src="statusView/statusView.js"></script>
 	<script src="components/jobStatus/jobStatus.js"></script>

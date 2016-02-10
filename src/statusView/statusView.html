@@ -1,3 +1,8 @@
 <p class="loading" ng-if="!jobs.length">Loading...</p>
 
-<job-status ng-repeat="j in jobs" job-name="{{ j.name }}" repository="{{ j.repository }}" branch="{{ j.branch }}"></job-status>
+<job-status 
+	ng-repeat="j in jobs" 
+	job-name="{{ j.name }}" 
+	repository="{{ j.repository }}" 
+	branch="{{ j.branch }}">
+</job-status>

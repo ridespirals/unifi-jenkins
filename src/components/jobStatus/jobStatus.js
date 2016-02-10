@@ -5,6 +5,7 @@ angular.module('unifi-jenkins')
 .directive('jobStatus', ['$log', '$interval', 'jobsFactory', function($log, $interval, jobsFactory) {
 	return {
 		restrict: 'E',
+		replace: true,
 		scope: {
 			name: '@jobName',
 			repo: '@repository',
@@ -14,10 +15,12 @@ angular.module('unifi-jenkins')
 		link: function(scope, elem, attrs) {
 
 			function refresh() {
+				scope.loading = true;
 				jobsFactory.getJob(scope.name).then(function(r) {
 					scope.item = r.data;
 					scope.lastUpdate = new Date();
-					$log.log('-job status- got job data', r.data);
+					scope.loading = false;
+					// $log.log('-job status- got job data', r.data);
 				});
 			}
 

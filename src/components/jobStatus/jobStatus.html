@@ -12,5 +12,11 @@
 		<div class="report" ng-class="report.iconClassName">
 			<div class="health">{{ report.score }}</div>
 			<div class="description">{{ report.description }}</div>
+		</div>
+	</div>
+
+	<div class="status">
+			<span ng-if="loading" class="loading">Loading...</span>
+			<span ng-if="!loading" class="updated" am-time-ago="lastUpdate"></span>
 	</div>
 </div>

@@ -36,6 +36,11 @@ angular.module('unifi-jenkins.statusView', ['ngRoute'])
 			name: 'dev-licensing',
 			repository: 'licensing',
 			branch: 'develop'
+		},
+		{
+			name: 'prod-marketing',
+			repository: 'unifi-marketing',
+			branch: 'default'
 		}
 	];
 

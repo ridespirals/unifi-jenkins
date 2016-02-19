@@ -11,7 +11,22 @@ angular.module('unifi-jenkins.statusView', ['ngRoute'])
 
 .controller('StatusViewCtrl', ['$scope', 'jobsFactory', 'teamFactory', function($scope, jobsFactory, teamFactory) {
 
+	jobsFactory.getAllJobs().then(function(data) {
+		var jobsList = data.data.jobs;
+		$scope.allJobs = jobsList;
+	});
+
 	$scope.jobs = [
+		{
+			name: 'prod-unifi',
+			repository: 'Discover',
+			branch: 'default'
+		},
+		{
+			name: 'prod-licensing',
+			repository: 'licensing',
+			branch: 'default'
+		},
 		{
 			name: 'beta-unifi',
 			repository: 'Discover',

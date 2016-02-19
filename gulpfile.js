@@ -27,7 +27,7 @@ gulp.task('copy', function() {
 
 gulp.task('sass', function() {
 	return gulp.src(['./src/sass/*.scss'])
-		.pipe(gulpSass().on('error', sass.logError))
+		.pipe(gulpSass().on('error', gulpSass.logError))
 		.pipe(gulp.dest('./dist'));
 });
 

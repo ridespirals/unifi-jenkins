@@ -5,6 +5,7 @@ var sequence 	= require('run-sequence');
 var merge		= require('merge-stream');
 var runElectron = require('gulp-run-electron');
 var useref		= require('gulp-useref');
+var neat		= require('node-neat').includePaths;
 
 gulp.task('run-app', function() {
 	gulp.src('dist')
@@ -27,7 +28,9 @@ gulp.task('copy', function() {
 
 gulp.task('sass', function() {
 	return gulp.src(['./src/sass/*.scss'])
-		.pipe(gulpSass().on('error', gulpSass.logError))
+		.pipe(gulpSass({
+			includePaths: [].concat(neat)
+		}).on('error', gulpSass.logError))
 		.pipe(gulp.dest('./dist'));
 });
 

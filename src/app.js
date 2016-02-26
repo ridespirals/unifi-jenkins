@@ -7,5 +7,5 @@ angular.module('unifi-jenkins', [
 	'angularMoment'
 ])
 .config(['$routeProvider', function($routeProvider) {
-	$routeProvider.otherwise({ redirectTo: '/jobs' });
+	$routeProvider.otherwise({ redirectTo: '/status' });
 }]);

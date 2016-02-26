@@ -9,11 +9,11 @@ angular.module('unifi-jenkins.allJobsView', ['ngRoute'])
 	});
 }])
 
-.controller('AllJobsCtrl', ['$scope', '$http', '$log',
-function($scope, $http, $log) {
+.controller('AllJobsCtrl', ['$scope', 'jobsFactory', '$log',
+function($scope, jobsFactory, $log) {
 	console.log('-- all jobs ctrl');
 	$scope.started = false;
-	$http.get('http://jenkins.inviewcloud.com/api/json?tree=jobs[name,url,color]&xpath=/hudson/job[ends-with(color/text(),%22_anime%22)]&wrapper=jobs&pretty=true').then(function(d) {
+	jobsFactory.getAllJobs().then(function(d) {
 		var result = d.data;
 
 		$log.log('-- get all jobs: ', result);

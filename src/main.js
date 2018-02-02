@@ -1,4 +1,4 @@
-var app = require('app');
+var app = require('unifi-jenkins');
 var BrowserWindow = require('browser-window');
 
 require('crash-reporter').start({
